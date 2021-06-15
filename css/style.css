@@ -1,0 +1,82 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1em;
+  margin-top: 5em;
+}
+
+.value-box {
+  cursor: pointer;
+  background-color: beige;
+  transition: 0.2s ease-in;
+}
+
+.value-box:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.value-label {
+  background-color: cadetblue;
+  color: white;
+  text-align: center;
+  padding: 0.4em;
+}
+
+.value {
+  text-align: center;
+  font-size: 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary-value {
+  min-height: 300px;
+}
+
+.secondary-value {
+  min-height: 100px;
+}
+
+.primary-col1 {
+  grid-column: 1/7;
+}
+
+.primary-col2 {
+  grid-column: 7/13;
+}
+
+.secondary-col1 {
+  grid-column: 1/4;
+}
+
+.secondary-col2 {
+  grid-column: 4/7;
+}
+.secondary-col3 {
+  grid-column: 7/10;
+}
+.secondary-col4 {
+  grid-column: 10/13;
+}
