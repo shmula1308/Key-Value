@@ -29,6 +29,7 @@ p {
   cursor: pointer;
   background-color: beige;
   transition: 0.2s ease-in;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .value-box:hover {
@@ -79,4 +80,11 @@ p {
 }
 .secondary-col4 {
   grid-column: 10/13;
+}
+
+.bgColor1 {
+  background-color: dodgerblue;
+}
+.bgColor2 {
+  background-color: salmon;
 }
