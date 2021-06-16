@@ -4,6 +4,10 @@ document.addEventListener("keydown", addBgColor);
 document.addEventListener("keyup", removeBgColor);
 
 function displayKeyEventInfo(ev) {
+  if (ev.keyCode === 9) {
+    ev.preventDefault();
+  }
+
   document.querySelector(".container").innerHTML = `
     <div class="value-box primary-col1">
         <p class="value-label">keyValue</p>
