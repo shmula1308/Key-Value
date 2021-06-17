@@ -2,6 +2,7 @@ document.addEventListener("keydown", displayKeyEventInfo);
 document.addEventListener("keydown", playSound);
 document.addEventListener("keydown", addBgColor);
 document.addEventListener("keyup", removeBgColor);
+document.addEventListener("keyup", uncheckHelperKey);
 
 function displayKeyEventInfo(ev) {
   if (ev.keyCode === 9) {
@@ -59,4 +60,35 @@ function removeBgColor() {
   const keyCode = document.querySelector(".primary-col2");
   keyCode.classList.remove("bgColor1");
   key.classList.remove("bgColor2");
+}
+
+function uncheckHelperKey(ev) {
+  document.querySelector(".container").innerHTML = `
+    <div class="value-box primary-col1">
+        <p class="value-label">keyValue</p>
+        <div class="value primary-value">${
+          ev.key === " " ? "spacebar" : ev.key
+        }</div>
+      </div>
+      <div class="value-box primary-col2">
+        <p class="value-label">keyCode</p>
+        <div class="value primary-value">${ev.keyCode}</div>
+      </div>
+      <div class="value-box secondary-col1">
+        <p class="value-label">altKey</p>
+        <div class="value secondary-value">${false}</div>
+      </div>
+      <div class="value-box secondary-col2">
+        <p class="value-label">ctrlKey</p>
+        <div class="value secondary-value">${false}</div>
+      </div>
+      <div class="value-box secondary-col3">
+        <p class="value-label">metaKey</p>
+        <div class="value secondary-value">${false}</div>
+      </div>
+      <div class="value-box secondary-col4">
+        <p class="value-label">shiftKey</p>
+        <div class="value secondary-value">${false}</div>
+      </div>
+    `;
 }
